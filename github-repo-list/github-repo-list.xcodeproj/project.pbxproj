@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C1752FD982F4086A2C2EB6E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F564D55B04064C78B7722000 /* libPods.a */; };
 		D85E58AB191859CA00B33083 /* FISGithubRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E58AA191859CA00B33083 /* FISGithubRepository.m */; };
 		D85E58AE19185A9200B33083 /* FISReposTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E58AD19185A9200B33083 /* FISReposTableViewController.m */; };
 		D85E58B119185B5A00B33083 /* FISReposDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E58B019185B5A00B33083 /* FISReposDataStore.m */; };
 		D85E58B419185BB000B33083 /* FISGithubAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E58B319185BB000B33083 /* FISGithubAPIClient.m */; };
+		D85E58B7191905B000B33083 /* FISGithubRepositorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E58B6191905B000B33083 /* FISGithubRepositorySpec.m */; };
+		D871AC49191C1B1C0029CCC8 /* FISReposTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D871AC48191C1B1C0029CCC8 /* FISReposTableViewControllerSpec.m */; };
+		D871AC8B191D226A0029CCC8 /* repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = D8EE3C4319193E6A008858FD /* repositories.json */; };
 		D8D9A6631912D73500E82D49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D9A6621912D73500E82D49 /* Foundation.framework */; };
 		D8D9A6651912D73500E82D49 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D9A6641912D73500E82D49 /* CoreGraphics.framework */; };
 		D8D9A6671912D73500E82D49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D9A6661912D73500E82D49 /* UIKit.framework */; };
@@ -23,7 +27,9 @@
 		D8D9A6831912D73500E82D49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D9A6621912D73500E82D49 /* Foundation.framework */; };
 		D8D9A6841912D73500E82D49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D9A6661912D73500E82D49 /* UIKit.framework */; };
 		D8D9A68C1912D73500E82D49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8D9A68A1912D73500E82D49 /* InfoPlist.strings */; };
-		D8D9A68E1912D73500E82D49 /* github_repo_listTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D9A68D1912D73500E82D49 /* github_repo_listTests.m */; };
+		D8EE3C4219191011008858FD /* FISGithubAPIClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EE3C4119191011008858FD /* FISGithubAPIClientSpec.m */; };
+		D8EE3C4419193E6A008858FD /* repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = D8EE3C4319193E6A008858FD /* repositories.json */; };
+		D8EE3C4619197EA9008858FD /* FISReposDataStoreSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EE3C4519197EA9008858FD /* FISReposDataStoreSpec.m */; };
 		EFF955BF26954A108ED22903 /* libPods-github-repo-listTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2098AF31B9343C7A4930DE4 /* libPods-github-repo-listTests.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		04B54FF2D0A643CBB7CE2EDA /* Pods-github-repo-listTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-repo-listTests.xcconfig"; path = "Pods/Pods-github-repo-listTests.xcconfig"; sourceTree = "<group>"; };
+		90CB1C7337334E0CAB28310F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C2098AF31B9343C7A4930DE4 /* libPods-github-repo-listTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-github-repo-listTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85E58A9191859CA00B33083 /* FISGithubRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISGithubRepository.h; sourceTree = "<group>"; };
 		D85E58AA191859CA00B33083 /* FISGithubRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISGithubRepository.m; sourceTree = "<group>"; };
@@ -48,6 +55,8 @@
 		D85E58B019185B5A00B33083 /* FISReposDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISReposDataStore.m; sourceTree = "<group>"; };
 		D85E58B219185BB000B33083 /* FISGithubAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISGithubAPIClient.h; sourceTree = "<group>"; };
 		D85E58B319185BB000B33083 /* FISGithubAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISGithubAPIClient.m; sourceTree = "<group>"; };
+		D85E58B6191905B000B33083 /* FISGithubRepositorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISGithubRepositorySpec.m; sourceTree = "<group>"; };
+		D871AC48191C1B1C0029CCC8 /* FISReposTableViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISReposTableViewControllerSpec.m; sourceTree = "<group>"; };
 		D8D9A65F1912D73500E82D49 /* github-repo-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github-repo-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D9A6621912D73500E82D49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8D9A6641912D73500E82D49 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,7 +73,10 @@
 		D8D9A6811912D73500E82D49 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D8D9A6891912D73500E82D49 /* github-repo-listTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "github-repo-listTests-Info.plist"; sourceTree = "<group>"; };
 		D8D9A68B1912D73500E82D49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D8D9A68D1912D73500E82D49 /* github_repo_listTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = github_repo_listTests.m; sourceTree = "<group>"; };
+		D8EE3C4119191011008858FD /* FISGithubAPIClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISGithubAPIClientSpec.m; sourceTree = "<group>"; };
+		D8EE3C4319193E6A008858FD /* repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = repositories.json; path = test_files/repositories.json; sourceTree = "<group>"; };
+		D8EE3C4519197EA9008858FD /* FISReposDataStoreSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISReposDataStoreSpec.m; sourceTree = "<group>"; };
+		F564D55B04064C78B7722000 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +87,7 @@
 				D8D9A6651912D73500E82D49 /* CoreGraphics.framework in Frameworks */,
 				D8D9A6671912D73500E82D49 /* UIKit.framework in Frameworks */,
 				D8D9A6631912D73500E82D49 /* Foundation.framework in Frameworks */,
+				4C1752FD982F4086A2C2EB6E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +113,7 @@
 				D8D9A6611912D73500E82D49 /* Frameworks */,
 				D8D9A6601912D73500E82D49 /* Products */,
 				04B54FF2D0A643CBB7CE2EDA /* Pods-github-repo-listTests.xcconfig */,
+				90CB1C7337334E0CAB28310F /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +134,7 @@
 				D8D9A6661912D73500E82D49 /* UIKit.framework */,
 				D8D9A6811912D73500E82D49 /* XCTest.framework */,
 				C2098AF31B9343C7A4930DE4 /* libPods-github-repo-listTests.a */,
+				F564D55B04064C78B7722000 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,8 +173,11 @@
 		D8D9A6871912D73500E82D49 /* github-repo-listTests */ = {
 			isa = PBXGroup;
 			children = (
-				D8D9A68D1912D73500E82D49 /* github_repo_listTests.m */,
 				D8D9A6881912D73500E82D49 /* Supporting Files */,
+				D85E58B6191905B000B33083 /* FISGithubRepositorySpec.m */,
+				D8EE3C4519197EA9008858FD /* FISReposDataStoreSpec.m */,
+				D8EE3C4119191011008858FD /* FISGithubAPIClientSpec.m */,
+				D871AC48191C1B1C0029CCC8 /* FISReposTableViewControllerSpec.m */,
 			);
 			path = "github-repo-listTests";
 			sourceTree = "<group>";
@@ -167,6 +185,7 @@
 		D8D9A6881912D73500E82D49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D8EE3C4319193E6A008858FD /* repositories.json */,
 				D8D9A6891912D73500E82D49 /* github-repo-listTests-Info.plist */,
 				D8D9A68A1912D73500E82D49 /* InfoPlist.strings */,
 			);
@@ -180,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8D9A6911912D73500E82D49 /* Build configuration list for PBXNativeTarget "github-repo-list" */;
 			buildPhases = (
+				455BA6F37EDD4CF5BE792BCF /* Check Pods Manifest.lock */,
 				D8D9A65B1912D73500E82D49 /* Sources */,
 				D8D9A65C1912D73500E82D49 /* Frameworks */,
 				D8D9A65D1912D73500E82D49 /* Resources */,
+				D85E58B51919052100B33083 /* ShellScript */,
+				A8AF7A46BA0A4F239B71BE6C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D9A67B1912D73500E82D49 /* Images.xcassets in Resources */,
+				D871AC8B191D226A0029CCC8 /* repositories.json in Resources */,
 				D8D9A66D1912D73500E82D49 /* InfoPlist.strings in Resources */,
 				D8D9A6761912D73500E82D49 /* Main.storyboard in Resources */,
 			);
@@ -263,12 +286,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D9A68C1912D73500E82D49 /* InfoPlist.strings in Resources */,
+				D8EE3C4419193E6A008858FD /* repositories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		455BA6F37EDD4CF5BE792BCF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		85A45D18F2A04C20B059ECAF /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,6 +338,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		A8AF7A46BA0A4F239B71BE6C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D85E58B51919052100B33083 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APPLEDOC_PATH=/usr/local/bin/appledoc\n$APPLEDOC_PATH \\\n--project-name ${PRODUCT_NAME} \\\n--project-company \"The Flatiron School\" \\\n--company-id \"com.flatironschool\" \\\n--output Docs \\\n--index-desc \"../README.md\" \\\n--templates ~/.appledoc_templates \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-install-docset \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n${PROJECT_DIR}/${PRODUCT_NAME};\nrm -r Docs/docset;\ncp -rf Docs/html/* Docs/;\nrm -r Docs/html;";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -319,7 +386,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8D9A68E1912D73500E82D49 /* github_repo_listTests.m in Sources */,
+				D8EE3C4619197EA9008858FD /* FISReposDataStoreSpec.m in Sources */,
+				D8EE3C4219191011008858FD /* FISGithubAPIClientSpec.m in Sources */,
+				D871AC49191C1B1C0029CCC8 /* FISReposTableViewControllerSpec.m in Sources */,
+				D85E58B7191905B000B33083 /* FISGithubRepositorySpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +503,7 @@
 		};
 		D8D9A6921912D73500E82D49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90CB1C7337334E0CAB28310F /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -446,6 +517,7 @@
 		};
 		D8D9A6931912D73500E82D49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90CB1C7337334E0CAB28310F /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

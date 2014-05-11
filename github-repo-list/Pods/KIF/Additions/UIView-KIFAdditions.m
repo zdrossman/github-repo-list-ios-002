@@ -95,7 +95,14 @@ typedef struct __GSEvent * GSEventRef;
     return [self accessibilityElementMatchingBlock:^(UIAccessibilityElement *element) {
         
         // TODO: This is a temporary fix for an SDK defect.
-        NSString *accessibilityValue = element.accessibilityValue;
+        NSString *accessibilityValue = nil;
+        @try {
+            accessibilityValue = element.accessibilityValue;
+        }
+        @catch (NSException *exception) {
+            NSLog(@"KIF: Unable to access accessibilityValue for element %@ because of exception: %@", element, exception.reason);
+        }
+        
         if ([accessibilityValue isKindOfClass:[NSAttributedString class]]) {
             accessibilityValue = [(NSAttributedString *)accessibilityValue string];
         }
@@ -183,6 +190,42 @@ typedef struct __GSEvent * GSEventRef;
             
             if (subelement) {
                 [elementStack addObject:subelement];
+            }
+        }
+    }
+    
+    if (!matchingButOccludedElement && [self isKindOfClass:[UICollectionView class]]) {
+        UICollectionView *collectionView = (UICollectionView *)self;
+        
+        NSArray *indexPathsForVisibleItems = [collectionView indexPathsForVisibleItems];
+        
+        for (NSUInteger section = 0, numberOfSections = [collectionView numberOfSections]; section < numberOfSections; section++) {
+            for (NSUInteger item = 0, numberOfItems = [collectionView numberOfItemsInSection:section]; item < numberOfItems; item++) {
+                // Skip visible items because they are already handled
+                NSIndexPath *indexPath = [NSIndexPath indexPathForItem:item inSection:section];
+                if ([indexPathsForVisibleItems containsObject:indexPath]) {
+                    continue;
+                }
+                
+                // Get the cell directly from the dataSource because UICollectionView will only vend visible cells
+                UICollectionViewCell *cell = [collectionView.dataSource collectionView:collectionView cellForItemAtIndexPath:indexPath];
+                
+                UIAccessibilityElement *element = [cell accessibilityElementMatchingBlock:matchBlock];
+                
+                // Remove the cell from the collection view so that it doesn't stick around
+                [cell removeFromSuperview];
+                
+                // Skip this cell if it isn't the one we're looking for
+                if (!element) {
+                    continue;
+                }
+                
+                // Scroll to the cell and wait for the animation to complete
+                [collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+                CFRunLoopRunInMode(UIApplicationCurrentRunMode, 0.5, false);
+                
+                // Now try finding the element again
+                return [self accessibilityElementMatchingBlock:matchBlock];
             }
         }
     }

@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
 
+    self.tableView.accessibilityIdentifier = @"Repo Table View";
+    self.tableView.accessibilityLabel=@"Repo Table View";
     self.dataStore = [FISReposDataStore sharedDataStore];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

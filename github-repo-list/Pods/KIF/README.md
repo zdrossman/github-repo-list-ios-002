@@ -7,7 +7,7 @@ KIF builds and performs the tests using a standard `XCTest` testing target.  Tes
 
 **KIF uses undocumented Apple APIs.** This is true of most iOS testing frameworks, and is safe for testing purposes, but it's important that KIF does not make it into production code, as it will get your app submission denied by Apple. Follow the instructions below to ensure that KIF is configured correctly for your project.
 
-**Note:** KIF 3.0 is not API compatible with KIF 1.0 and uses a different test execution mechanism.  KIF 1.0 can be found in the [Releases](https://github.com/kif-framework/KIF/releases/) section or on [CocoaPods](http://cocoapods.org).
+**Note:** KIF 2.0 is not API compatible with KIF 1.0 and uses a different test execution mechanism.  KIF 1.0 can be found in the [Releases](https://github.com/kif-framework/KIF/releases/) section or on [CocoaPods](http://cocoapods.org).
 
 Features
 --------
@@ -43,7 +43,7 @@ Select your project in Xcode and click on "Add Target" in the bottom left corner
 
 The testing target will add a header and implementation file, likely "Acceptance_Tests.m/h" to match your target name. Delete those.
 
-Once your test target set up, add the following to your Podspec file. Use your target's name as appropriate.
+Once your test target set up, add the following to your Podfile file. Use your target's name as appropriate.
 
 ```Ruby
 target 'Acceptance Tests', :exclusive => true do
