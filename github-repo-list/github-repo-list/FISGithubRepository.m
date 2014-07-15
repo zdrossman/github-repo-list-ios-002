@@ -10,4 +10,23 @@
 
 @implementation FISGithubRepository
 
+-initWithDictionary:(NSDictionary *)githubRepoDictionary
+{
+    self = [super init];
+    
+    if (self)
+    {
+        self.fullNamepa = githubRepoDictionary[@"full_name"];
+         self.htmlURL = githubRepoDictionary[@"url"];
+         self.repositoryID = githubRepoDictionary[@"id"];
+        
+    }
+    
+    return self;
+}
+
+-(BOOL)isEqual:(id)object
+{
+    return YES;
+}
 @end

@@ -8,9 +8,10 @@
 
 #import "FISReposTableViewController.h"
 #import "FISReposDataStore.h"
+#import "FISGithubRepository.h"
 
 @interface FISReposTableViewController ()
-@property (strong, nonatomic) FISReposDataStore *dataStore;
+//@property (strong, nonatomic) FISReposDataStore *dataStore;
 @end
 
 @implementation FISReposTableViewController
@@ -31,6 +32,14 @@
     self.tableView.accessibilityIdentifier = @"Repo Table View";
     self.tableView.accessibilityLabel=@"Repo Table View";
     self.dataStore = [FISReposDataStore sharedDataStore];
+    
+    [self.dataStore fetchDataWithCompletion:^BOOL{
+        [self.tableView reloadData];
+        return YES;
+    }];
+
+    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -63,8 +72,8 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    FISGithubRepository *repo = self.dataStore.repositories[indexPath.row];
+    cell.textLabel.text = repo.fullNamepa;
     return cell;
 }
 

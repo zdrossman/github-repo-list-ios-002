@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		318AB38919759DE000EF7BD4 /* FISReposDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 318AB38819759DE000EF7BD4 /* FISReposDataStore.m */; };
+		318AB38C1975A92200EF7BD4 /* FISGithubAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 318AB38B1975A92200EF7BD4 /* FISGithubAPIClient.m */; };
 		4C1752FD982F4086A2C2EB6E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F564D55B04064C78B7722000 /* libPods.a */; };
 		D85E58AB191859CA00B33083 /* FISGithubRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E58AA191859CA00B33083 /* FISGithubRepository.m */; };
 		D85E58AE19185A9200B33083 /* FISReposTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E58AD19185A9200B33083 /* FISReposTableViewController.m */; };
@@ -39,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		04B54FF2D0A643CBB7CE2EDA /* Pods-github-repo-listTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-repo-listTests.xcconfig"; path = "Pods/Pods-github-repo-listTests.xcconfig"; sourceTree = "<group>"; };
+		318AB38719759DE000EF7BD4 /* FISReposDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISReposDataStore.h; sourceTree = "<group>"; };
+		318AB38819759DE000EF7BD4 /* FISReposDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISReposDataStore.m; sourceTree = "<group>"; };
+		318AB38A1975A92200EF7BD4 /* FISGithubAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FISGithubAPIClient.h; path = ../FISGithubAPIClient.h; sourceTree = "<group>"; };
+		318AB38B1975A92200EF7BD4 /* FISGithubAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FISGithubAPIClient.m; path = ../FISGithubAPIClient.m; sourceTree = "<group>"; };
 		90CB1C7337334E0CAB28310F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C2098AF31B9343C7A4930DE4 /* libPods-github-repo-listTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-github-repo-listTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85E58A9191859CA00B33083 /* FISGithubRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISGithubRepository.h; sourceTree = "<group>"; };
@@ -128,8 +134,12 @@
 		D8D9A6681912D73500E82D49 /* github-repo-list */ = {
 			isa = PBXGroup;
 			children = (
+				318AB38A1975A92200EF7BD4 /* FISGithubAPIClient.h */,
+				318AB38B1975A92200EF7BD4 /* FISGithubAPIClient.m */,
 				D85E58AC19185A9200B33083 /* FISReposTableViewController.h */,
 				D85E58AD19185A9200B33083 /* FISReposTableViewController.m */,
+				318AB38719759DE000EF7BD4 /* FISReposDataStore.h */,
+				318AB38819759DE000EF7BD4 /* FISReposDataStore.m */,
 				D8D9A6711912D73500E82D49 /* FISAppDelegate.h */,
 				D8D9A6721912D73500E82D49 /* FISAppDelegate.m */,
 				D8D9A6741912D73500E82D49 /* Main.storyboard */,
@@ -181,7 +191,6 @@
 				D8D9A65B1912D73500E82D49 /* Sources */,
 				D8D9A65C1912D73500E82D49 /* Frameworks */,
 				D8D9A65D1912D73500E82D49 /* Resources */,
-				D85E58B51919052100B33083 /* ShellScript */,
 				A8AF7A46BA0A4F239B71BE6C /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -331,19 +340,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D85E58B51919052100B33083 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "APPLEDOC_PATH=/usr/local/bin/appledoc\n$APPLEDOC_PATH \\\n--project-name ${PRODUCT_NAME} \\\n--project-company \"The Flatiron School\" \\\n--company-id \"com.flatironschool\" \\\n--output Docs \\\n--index-desc \"../README.md\" \\\n--templates ~/.appledoc_templates \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-install-docset \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n${PROJECT_DIR}/${PRODUCT_NAME};\nrm -r Docs/docset;\ncp -rf Docs/html/* Docs/;\nrm -r Docs/html;";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -354,6 +350,8 @@
 				D85E58AB191859CA00B33083 /* FISGithubRepository.m in Sources */,
 				D8D9A66F1912D73500E82D49 /* main.m in Sources */,
 				D85E58AE19185A9200B33083 /* FISReposTableViewController.m in Sources */,
+				318AB38C1975A92200EF7BD4 /* FISGithubAPIClient.m in Sources */,
+				318AB38919759DE000EF7BD4 /* FISReposDataStore.m in Sources */,
 				D8D9A6731912D73500E82D49 /* FISAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

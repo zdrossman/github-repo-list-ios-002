@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class FISReposDataStore;
 
-@interface FISReposTableViewController : UITableViewController
+@interface FISReposTableViewController : UITableViewController <NSURLSessionDelegate>
+
+@property (strong, nonatomic) FISReposDataStore *dataStore;
 
 @end
