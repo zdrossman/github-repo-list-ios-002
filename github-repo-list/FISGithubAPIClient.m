@@ -19,7 +19,9 @@
     
     NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
-        dataBlock(data,error);
+    NSArray *serializedData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        
+    dataBlock(serializedData);
         
     }];
     

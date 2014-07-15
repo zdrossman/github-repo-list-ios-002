@@ -25,8 +25,15 @@
     return self;
 }
 
--(BOOL)isEqual:(id)object
+-(BOOL)isEqual:(FISGithubRepository*)repo
 {
-    return YES;
+    if ([repo.repositoryID isEqualToString:self.repositoryID])
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
 }
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^DataBlock)(NSData *,NSError *);
+typedef void(^DataBlock)(NSArray *);
 
 @interface FISGithubAPIClient : NSObject
 

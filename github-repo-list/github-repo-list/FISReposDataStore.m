@@ -27,9 +27,9 @@
     
     FISGithubAPIClient *client = [[FISGithubAPIClient alloc] init];
     
-    [client fetchRepositoriesFromGithub:^(NSData *data, NSError *error) {
+    [client fetchRepositoriesFromGithub:^(NSArray *serializedData) {
         
-        NSArray *serializedData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+
         
         for (NSDictionary *repo in serializedData)
         {
