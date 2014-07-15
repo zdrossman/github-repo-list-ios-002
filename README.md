@@ -162,7 +162,9 @@ As you can see we have quite a lot of data on each repo.
   (NSString *)repositoryID
   ```
 
-  2. In the `FISGithubAPIClient` create a method that retreives a list of all of the repositories, and passes the `NSArray` of `NSDictionaries` to a completionBlock
-  3. Create a new method in `FISGithubRepository` that will take the `NSDictionary` representation of the repository and returns a new instance of `FISGithubRepository` all filled out. Also create an `isEqual` method
-  4. Add a method to `FISGithubDataStore` that uses `FISGithubAPIClient` to fill the `repositories` property with `FISGithubRepository` objects. In the completionBlock just return a `BOOL` success variable.
-  5. In your `FISReposTableViewController` on `viewDidLoad` retreive the repos from the `FISGithubDataStore` and display them!
+  2. In your `FISReposTableViewController` on `viewDidLoad` retreive the repos from the API and display them!
+
+## Extra Credit
+  1. In the `FISGithubAPIClient` create a method that retreives a list of all of the repositories, and passes the `NSArray` of `NSDictionaries` to a completionBlock
+  2. Create a new method in `FISGithubRepository` that will take the `NSDictionary` representation of the repository and returns a new instance of `FISGithubRepository` all filled out. Also create an `isEqual` method
+  3. Add a method to `FISGithubDataStore` that uses `FISGithubAPIClient` to fill the `repositories` property with `FISGithubRepository` objects. In the completionBlock just return a `BOOL` success variable.
